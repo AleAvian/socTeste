@@ -8,7 +8,7 @@ public class Exame {
 	private String nome;
 	private Date data;
 	private String resultadoExame;
-	private Paciente paciente;
+	private int pacienteId;
 
 	public int getId() {
 		return id;
@@ -42,12 +42,12 @@ public class Exame {
 		this.resultadoExame = resultadoExame;
 	}
 
-	public Paciente getPaciente() {
-		return paciente;
+	public int getPacienteId() {
+		return pacienteId;
 	}
 
-	public void setPaciente(Paciente paciente) {
-		this.paciente = paciente;
+	public void setPacienteId(int pacienteId) {
+		this.pacienteId = pacienteId;
 	}
 
 }
