@@ -1,20 +1,37 @@
 package com.soc.socteste.model;
 
-import java.sql.Date;
+import com.soc.socteste.dto.ExameDTO;
+
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Exame {
 
-	private int id;
+	public Exame(){
+
+	}
+
+	public Exame(ExameDTO exameDTO) throws ParseException {
+		this.id = exameDTO.getId();
+		this.nome = exameDTO.getNome();
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		this.data = formato.parse(exameDTO.getData());
+		this.resultadoExame = exameDTO.getResultadoExame();
+		this.pacienteId = exameDTO.getPaciente().getId();
+	}
+
+	private Integer id;
 	private String nome;
 	private Date data;
 	private String resultadoExame;
 	private int pacienteId;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

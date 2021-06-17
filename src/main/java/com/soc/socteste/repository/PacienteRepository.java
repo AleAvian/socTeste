@@ -32,16 +32,25 @@ public class PacienteRepository {
 
 	@SuppressWarnings("deprecation")
 	public Paciente buscarId(int id) {
-		String sql = "select *from paciente where id = ?";
-		Paciente paciente = jdbcTemplate.queryForObject(sql, new Object[] { id }, new PacienteRowMapper());
-		return paciente;
+		String sql = "select * from paciente where id = ?";
+		try {
+			Paciente paciente = jdbcTemplate.queryForObject(sql, new Object[] { id }, new PacienteRowMapper());
+			return paciente;
+		}catch (Exception e){
+			return null;
+		}
 
 	}
 
 	public Paciente findByNome(String nome) {
 		String sql = "select *from paciente where nome = ? ";
-		Paciente paciente = jdbcTemplate.queryForObject(sql, new Object [] {nome}, new PacienteRowMapper());
-		return paciente;
+		try {
+			Paciente paciente = jdbcTemplate.queryForObject(sql, new Object[]{nome}, new PacienteRowMapper());
+			return paciente;
+		}catch (Exception e){
+			return null;
+		}
+
 	}
 
 }

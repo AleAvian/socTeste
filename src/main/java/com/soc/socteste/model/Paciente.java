@@ -4,11 +4,11 @@ package com.soc.socteste.model;
 
 public class Paciente {
 
-	private int id;
+	private Integer id;
 	private String nome;
 	
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	public void setId(int id) {
