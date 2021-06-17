@@ -38,4 +38,10 @@ public class PacienteRepository {
 
 	}
 
+	public Paciente findByNome(String nome) {
+		String sql = "select *from paciente where nome = ? ";
+		Paciente paciente = jdbcTemplate.queryForObject(sql, new Object [] {nome}, new PacienteRowMapper());
+		return paciente;
+	}
+
 }
