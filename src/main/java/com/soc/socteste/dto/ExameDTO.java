@@ -1,10 +1,9 @@
 package com.soc.socteste.dto;
 
+import java.text.SimpleDateFormat;
+
 import com.soc.socteste.model.Exame;
 import com.soc.socteste.model.Paciente;
-
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 
 public class ExameDTO {
 

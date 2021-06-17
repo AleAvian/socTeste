@@ -17,7 +17,7 @@ public class JDBCConfig {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/socTeste");
 		dataSource.setUsername("root");
-		dataSource.setPassword("AlineDB03");
+		dataSource.setPassword("aleDB");
 		return dataSource;
 
 	}

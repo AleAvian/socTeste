@@ -1,20 +1,20 @@
 package com.soc.socteste.repository;
 
-import com.soc.socteste.dto.ExameDTO;
-import com.soc.socteste.model.Paciente;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
-
-import com.soc.socteste.model.Exame;
-import com.soc.socteste.repository.rowmapper.ExameRowMapper;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.soc.socteste.dto.ExameDTO;
+import com.soc.socteste.model.Exame;
+import com.soc.socteste.model.Paciente;
+import com.soc.socteste.repository.rowmapper.ExameRowMapper;
 
 @Repository
 public class ExameRepository {
